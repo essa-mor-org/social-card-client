@@ -1,0 +1,78 @@
+:root {
+    --Social-header-font: 14px;
+    --Social-header-color: #616770;
+}
+
+.Social_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.Social_header_column1{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
+    
+}
+
+.Social_header_image_link{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.Social_header_image{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.Social_header_name{
+    color:rgb(54, 88, 153);
+    text-decoration-line: none;
+    font-size: var(--Social-header-font);
+}
+
+.Social_header_name:hover{
+    text-decoration-line: underline;
+}
+
+.Social_header_time{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    color: var(--Social-header-color);
+    text-decoration-line: none;
+}
+
+.Social_header_time:hover{
+    text-decoration-line: underline;
+}
+
+.Social_header_saperator{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    color: var(--Social-header-color);
+}
+
+.Social_header_world{
+    grid-row-start: 2;
+    grid-column-start: 4;
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yE/r/lUxJXT2M6Ll.png);
+    background-size: 22px 36px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-position-x: 0;
+    background-position-y: -22px;
+}
+
+.Social_header_toggle{
+    background-image: url(https://www.facebook.com/rsrc.php/v3/yJ/r/dskhplJuwiX.png);
+    background-repeat: no-repeat;
+    background-size: 64px 396px;
+    background-position: 0 -196px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
