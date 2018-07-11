@@ -1,32 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SocialCardPost test renders correctly - no text 1`] = `
-<div>
-  <a
-    href="#"
-  >
-    <img
-      className="Social_post_image"
-      src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
-    />
-  </a>
-</div>
+<a
+  href="#"
+>
+  <img
+    className="Social_post_image"
+    src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
+  />
+</a>
 `;
 
 exports[`SocialCardPost test renders correctly 1`] = `
-<div>
+Array [
   <div
     className="Social_post_text"
-  >
+>
     some text some text
-  </div>
+</div>,
   <a
     href="#"
-  >
+>
     <img
-      className="Social_post_image"
-      src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
+        className="Social_post_image"
+        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
     />
-  </a>
-</div>
+</a>,
+]
 `;

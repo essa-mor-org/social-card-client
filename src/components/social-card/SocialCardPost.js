@@ -5,14 +5,14 @@ import empty from 'is-empty';
 import './SocialCardPost.css';
 
 function SocialCardPost({ text, image }) {
-	return (<div>
+	return (<React.Fragment>
 		{!empty(text) && <div className="Social_post_text">
 			{text}
 		</div>}
 		<a href="#">
 			<img className="Social_post_image" src={image} />
 		</a>
-	</div>);
+	</React.Fragment>);
 }
 
 SocialCardPost.propTypes = {
