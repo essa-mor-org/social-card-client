@@ -1,0 +1,11 @@
+.Social_post_text{
+	color: #1d2129;
+	font-size: 14px;
+}
+
+.Social_post_image{
+	max-width: 500px;
+	border-top: 1px solid rgb(223, 226, 229);
+	border-bottom: 1px solid rgb(223, 226, 229);
+	margin: 10px 0 10px 0;
+}
