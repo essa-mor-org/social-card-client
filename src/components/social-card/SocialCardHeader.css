@@ -12,7 +12,7 @@
 .Social_header_column1{
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 5px;
+    grid-gap: 0px 5px;
     
 }
 
@@ -28,6 +28,7 @@
 }
 
 .Social_header_name{
+    align-self: center;
     color:rgb(54, 88, 153);
     text-decoration-line: none;
     font-size: var(--Social-header-font);
@@ -38,6 +39,7 @@
 }
 
 .Social_header_time{
+    align-self: center;
     grid-row-start: 2;
     grid-column-start: 2;
     color: var(--Social-header-color);
@@ -55,6 +57,7 @@
 }
 
 .Social_header_world{
+    align-self: center;
     grid-row-start: 2;
     grid-column-start: 4;
     background-image: url(https://www.facebook.com/rsrc.php/v3/yE/r/lUxJXT2M6Ll.png);

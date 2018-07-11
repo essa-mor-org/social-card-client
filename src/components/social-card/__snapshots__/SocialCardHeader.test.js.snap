@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Social_header"
+>
+  <div
+    className="Social_header_column1"
+  >
+    <a
+      className="Social_header_image_link"
+      href="#"
+    >
+      <img
+        className="Social_header_image"
+        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
+      />
+    </a>
+    <a
+      className="Social_header_name"
+      href="#"
+    >
+      Vevo
+    </a>
+    <a
+      className="Social_header_time"
+      href="#"
+    >
+      3 hrs
+    </a>
+    <span
+      className="Social_header_saperator"
+    >
+      .
+    </span>
+    <a
+      className="Social_header_world"
+      href="#"
+    />
+  </div>
+  <a
+    className="Social_header_toggle"
+    href="#"
+  />
+</div>
+`;
