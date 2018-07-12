@@ -2,6 +2,8 @@
     display: flex;
     justify-content: flex-end;
     padding-left: var(--Social-space);
+    border-bottom: 1px solid var(--Social-border-color);
+    padding-bottom: var(--Social-space);
 }
 
 .Social_reaction_like{

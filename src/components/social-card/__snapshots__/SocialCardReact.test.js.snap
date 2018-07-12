@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialCardReact test renders correctly 1`] = `
+<div
+  className="Social_react"
+>
+  <a
+    className="Reaction_like Reaction_button"
+    href="#"
+  >
+    Like
+  </a>
+  <a
+    className="Reaction_comment Reaction_button"
+    href="#"
+  >
+    Comment
+  </a>
+  <a
+    className="Reaction_share Reaction_button"
+    href="#"
+  >
+    Share
+  </a>
+</div>
+`;

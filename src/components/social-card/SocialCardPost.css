@@ -7,7 +7,7 @@
 
 .Social_post_image{
 	max-width: 500px;
-	border-top: 1px solid rgb(223, 226, 229);
-	border-bottom: 1px solid rgb(223, 226, 229);
+	border-top: 1px solid var(--Social-border-color);
+	border-bottom: 1px solid var(--Social-border-color);
 	margin: var(--Social-space) 0 var(--Social-space) 0;
 }

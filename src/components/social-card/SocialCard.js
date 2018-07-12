@@ -3,6 +3,7 @@ import React from 'react';
 import SocialCardHeader from './SocialCardHeader';
 import SocialCardPost from './SocialCardPost';
 import SocialCardReactions from './SocialCardReactions';
+import SocialCardReact from './SocialCardReact';
 
 import './SocialCard.css';
 
@@ -21,6 +22,7 @@ function SocialCard() {
 			comments= {2}
 			shares= {3}
 		/>
+		<SocialCardReact/>
 	</div>);
 }
 

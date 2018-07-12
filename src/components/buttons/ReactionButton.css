@@ -1,0 +1,31 @@
+.Reaction_button{
+	color: var(--Social-color-number);
+	text-decoration-line: none;
+	font-size: var(--Social-font-meduim);
+}
+
+.Reaction_button::before{
+	background-image: url(https://www.facebook.com/rsrc.php/v3/y1/r/vZsdP4nVG2m.png);
+    background-repeat: no-repeat;
+    content: "";
+	width: 18px;
+	height: 18px;
+	margin-right: 6px;
+	display: inline-block;
+	margin-bottom: -3px;
+}
+
+.Reaction_like::before{
+	background-size: 20px 1368px;
+	background-position: 0 -180px;
+}
+
+.Reaction_comment::before{
+	background-size: 20px 1368px;
+	background-position: 0 -120px;
+}
+
+.Reaction_share::before{
+	background-size: 20px 1368px;
+	background-position: 0 -320px;
+}
