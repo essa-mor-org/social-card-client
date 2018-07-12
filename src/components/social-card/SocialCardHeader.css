@@ -1,12 +1,7 @@
-:root {
-    --Social-header-font: 14px;
-    --Social-header-color: #616770;
-}
-
 .Social_header{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: var(--Social-space);
 }
 
 .Social_header_column1{
@@ -31,7 +26,7 @@
     align-self: center;
     color:rgb(54, 88, 153);
     text-decoration-line: none;
-    font-size: var(--Social-header-font);
+    font-size: var(--Social-font-meduim);
 }
 
 .Social_header_name:hover{
@@ -42,7 +37,7 @@
     align-self: center;
     grid-row-start: 2;
     grid-column-start: 2;
-    color: var(--Social-header-color);
+    color: var(--Social-color-number);
     text-decoration-line: none;
 }
 
@@ -53,7 +48,7 @@
 .Social_header_saperator{
     grid-row-start: 2;
     grid-column-start: 3;
-    color: var(--Social-header-color);
+    color: var(--Social-color-number);
 }
 
 .Social_header_world{

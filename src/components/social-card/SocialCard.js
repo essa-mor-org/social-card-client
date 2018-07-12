@@ -2,6 +2,7 @@ import React from 'react';
 
 import SocialCardHeader from './SocialCardHeader';
 import SocialCardPost from './SocialCardPost';
+import SocialCardReactions from './SocialCardReactions';
 
 import './SocialCard.css';
 
@@ -14,6 +15,11 @@ function SocialCard() {
 		<SocialCardPost
 			text="Calling all Guns N' Roses fans! Here's your chance to win the Appetite For Destruction Super Deluxe Box Set‼️ Enter now for your chance to win!"
 			image="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-9/36907526_10155523573880933_4550184912837148672_n.jpg?_nc_cat=0&oh=907c9bbce64ffe2808a821fb673f140d&oe=5BA005E7"
+		/>
+		<SocialCardReactions 
+			likes={157}
+			comments= {2}
+			shares= {3}
 		/>
 	</div>);
 }

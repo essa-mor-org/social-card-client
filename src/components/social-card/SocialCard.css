@@ -1,2 +1,6 @@
 .Social_card {
-  background-color: white; }
+  background-color: white;
+  max-width: 500px;
+  margin-top: var(--Social-space);
+  margin-bottom: var(--Social-space);
+}

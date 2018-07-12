@@ -1,6 +1,18 @@
+:root {
+  --Social-font-smallmeduim: 13px;
+  --Social-font-meduim: 14px;
+  --Social-color-number: #616770;
+  --Social-space: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
   background-color: #e9ebee; }
+
+#root{
+  display: flex;
+  justify-content: center;
+}  

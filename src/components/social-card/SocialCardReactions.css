@@ -1,0 +1,35 @@
+.Social_reaction{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: var(--Social-space);
+}
+
+.Social_reaction_like{
+    background-image: url(https://www.facebook.com/rsrc.php/v3/y1/r/vZsdP4nVG2m.png);
+    background-repeat: no-repeat;
+    background-size: 20px 1368px;
+    background-position: 0 -804px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.Social_reaction_number{
+    font-size: var(--Social-font-smallmeduim);
+    color: var(--Social-color-number);
+    text-decoration-line: none;
+}
+
+.Social_reaction_number:hover{
+    text-decoration-line: underline;
+}
+
+.Social_reaction_fixed{
+    flex-basis: auto;
+    margin-right: var(--Social-space);
+}
+
+.Social_reaction_strech{
+    flex-grow: 1;
+    text-align: left;
+}
