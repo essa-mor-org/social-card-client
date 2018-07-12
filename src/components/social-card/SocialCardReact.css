@@ -1,0 +1,8 @@
+.Social_react{
+	display: flex;
+	justify-content: space-between;
+	padding-top: var(--Social-space);
+	margin-bottom: var(--Social-space);
+	padding-left: calc(var(--Social-space) * 6);
+	padding-right: calc(var(--Social-space) * 6);
+}
