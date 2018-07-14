@@ -11,17 +11,18 @@ function SocialCardComments({ profileImage, comments }) {
 			<img className="Social_comments_image" src={profileImage} alt="" />
 			<input className="Social_comments_input" type="text" placeholder="Write a comment..." />
 		</div>
-		{!empty(comments) && comments.map(({ profileImage, profileName, comment }) => 
-			<Comment profileImage={profileImage} profileName={profileName} comment={comment} />)}
+		{!empty(comments) && comments.map(({ id, profileImage, profileName, comment }) => 
+			<Comment key={id} profileImage={profileImage} profileName={profileName} comment={comment} />)}
 	</div>);
 }
 
 SocialCardComments.propTypes = {
 	profileImage: PropTypes.string.isRequired,
 	comments: PropTypes.arrayOf(PropTypes.shape({
-		profileImage: PropTypes.string,
-		profileName: PropTypes.string,
-		comment: PropTypes.string
+		profileImage: PropTypes.string.isRequired,
+		profileName: PropTypes.string.isRequired,
+		comment: PropTypes.string.isRequired,
+		id: PropTypes.number.isRequired
 	}))
 };
 
