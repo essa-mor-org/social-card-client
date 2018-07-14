@@ -14,10 +14,8 @@ function Comment({profileImage ,profileName, comment}) {
 }
 
 Comment.propTypes = {
-	comment: PropTypes.shape({
-		profileImage: PropTypes.string.isRequired,
-		profileName: PropTypes.string.isRequired,
-		comment: PropTypes.string.isRequired
-	}).isRequired
+	profileImage: PropTypes.string,
+	profileName: PropTypes.string,
+	comment: PropTypes.string
 };
 export default Comment;

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comment test renders correctly - proprties 1`] = `
+exports[`Comment test renders correctly - no comments 1`] = `
 <div
   className="Comment_panel"
 >
   <img
     alt=""
     className="Social_comments_image"
-    src={undefined}
+    src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
   />
   <div
     className="Comment_comment_panel"
@@ -23,7 +23,7 @@ exports[`Comment test renders correctly - proprties 1`] = `
 </div>
 `;
 
-exports[`Comment test renders correctly - proprties 2`] = `
+exports[`Comment test renders correctly - with comments 1`] = `
 <div
   className="Comment_panel"
 >
@@ -38,14 +38,10 @@ exports[`Comment test renders correctly - proprties 2`] = `
     <a
       className="Comment_profile"
       href="#"
-    >
-      Vevo
-    </a>
+    />
     <span
       className="Comment_comment"
-    >
-      Hi there.
-    </span>
+    />
   </div>
 </div>
 `;
