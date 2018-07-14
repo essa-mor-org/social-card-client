@@ -10,7 +10,7 @@ function SocialCardPost({ text, image }) {
 			{text}
 		</div>}
 		<a href="#">
-			<img className="Social_post_image" src={image} />
+			<img className="Social_post_image" src={image} alt=""/>
 		</a>
 	</React.Fragment>);
 }

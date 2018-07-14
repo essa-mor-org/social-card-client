@@ -5,6 +5,7 @@ exports[`SocialCardPost test renders correctly - no text 1`] = `
   href="#"
 >
   <img
+    alt=""
     className="Social_post_image"
     src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
   />
@@ -22,6 +23,7 @@ Array [
     href="#"
 >
     <img
+        alt=""
         className="Social_post_image"
         src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
     />

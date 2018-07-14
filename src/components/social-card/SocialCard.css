@@ -1,6 +1,9 @@
 .Social_card {
+  --Social_card_width: 500px;
   background-color: white;
-  max-width: 500px;
+  max-width: var(--Social_card_width);
   margin-top: var(--Social-space);
   margin-bottom: var(--Social-space);
+  border: 1px solid var(--Social-border-color);
+  box-sizing: border-box;
 }

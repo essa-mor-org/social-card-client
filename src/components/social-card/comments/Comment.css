@@ -1,0 +1,30 @@
+.Comment_panel{
+    display: flex;
+    padding-left: var(--Social-space);
+    padding-bottom: var(--Social-space);
+}
+
+.Comment_comment_panel{
+    background-color: var(--Social-bg-color);
+    border-radius: calc(var(--Social_comment_radius)/2);
+    max-width:  var(--Social-comment-width);
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+}
+
+.Comment_profile{
+    color: var(--Social-color-link);
+    font-size: var(--Social-font-smallmeduim);
+    text-decoration-line: none;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.Comment_profile:hover{
+    text-decoration-line: underline;
+}
+
+.Comment_comment{
+    font-size: var(--Social-font-smallmeduim);
+    color: #1d2129;
+}

@@ -12,6 +12,7 @@ exports[`SocialCardHeader test renders correctly 1`] = `
       href="#"
     >
       <img
+        alt=""
         className="Social_header_image"
         src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
       />
