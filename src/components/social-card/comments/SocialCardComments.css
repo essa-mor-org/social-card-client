@@ -1,4 +1,5 @@
 .Social_comments_input_panel{
+    padding-top: var(--Social-space);
     display: flex;
     padding-left: var(--Social-space);
     padding-bottom: var(--Social-space);
