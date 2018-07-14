@@ -1,8 +1,8 @@
 import React from 'react';
-import SocialCardComments from './Comment';
+import SocialCardComments from './SocialCardComments';
 import renderer from 'react-test-renderer';
 
-describe('Comment test', () => {
+describe('SocialCardComments test', () => {
 	it('renders correctly - no comments', () => {
 		const tree = renderer
 			.create(<SocialCardComments

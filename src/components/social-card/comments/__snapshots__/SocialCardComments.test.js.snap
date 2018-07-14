@@ -1,47 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comment test renders correctly - no comments 1`] = `
+exports[`SocialCardComments test renders correctly - no comments 1`] = `
 <div
-  className="Comment_panel"
+  className="Social_comments_input_panel"
 >
   <img
     alt=""
     className="Social_comments_image"
     src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
   />
-  <div
-    className="Comment_comment_panel"
-  >
-    <a
-      className="Comment_profile"
-      href="#"
-    />
-    <span
-      className="Comment_comment"
-    />
-  </div>
+  <input
+    className="Social_comments_input"
+    placeholder="Write a comment..."
+    type="text"
+  />
 </div>
 `;
 
-exports[`Comment test renders correctly - with comments 1`] = `
-<div
-  className="Comment_panel"
->
-  <img
-    alt=""
-    className="Social_comments_image"
-    src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
-  />
+exports[`SocialCardComments test renders correctly - with comments 1`] = `
+Array [
   <div
-    className="Comment_comment_panel"
-  >
-    <a
-      className="Comment_profile"
-      href="#"
+    className="Social_comments_input_panel"
+>
+    <img
+        alt=""
+        className="Social_comments_image"
+        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
     />
-    <span
-      className="Comment_comment"
+    <input
+        className="Social_comments_input"
+        placeholder="Write a comment..."
+        type="text"
     />
-  </div>
-</div>
+</div>,
+  <div
+    className="Comment_panel"
+>
+    <img
+        alt=""
+        className="Social_comments_image"
+        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg"
+    />
+    <div
+        className="Comment_comment_panel"
+    >
+        <a
+            className="Comment_profile"
+            href="#"
+        >
+            Vevo
+        </a>
+        <span
+            className="Comment_comment"
+        >
+            Hi
+        </span>
+    </div>
+</div>,
+]
 `;
