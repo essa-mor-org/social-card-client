@@ -3,7 +3,7 @@ import Comment from './Comment';
 import renderer from 'react-test-renderer';
 
 describe('Comment test', () => {
-	it('renders correctly - proprties', () => {
+	it('renders correctly - no proprties', () => {
 		const tree = renderer
 			.create(<Comment />)
 			.toJSON();

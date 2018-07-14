@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comment test renders correctly - proprties 1`] = `
+exports[`Comment test renders correctly - no proprties 1`] = `
 <div
   className="Comment_panel"
 >
@@ -23,7 +23,7 @@ exports[`Comment test renders correctly - proprties 1`] = `
 </div>
 `;
 
-exports[`Comment test renders correctly - proprties 2`] = `
+exports[`Comment test renders correctly - proprties 1`] = `
 <div
   className="Comment_panel"
 >
