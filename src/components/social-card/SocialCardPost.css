@@ -6,8 +6,9 @@
 }
 
 .Social_post_image{
-	max-width: 500px;
+	max-width: 498px;
 	border-top: 1px solid var(--Social-border-color);
 	border-bottom: 1px solid var(--Social-border-color);
 	margin: var(--Social-space) 0 var(--Social-space) 0;
+	box-sizing: border-box;
 }

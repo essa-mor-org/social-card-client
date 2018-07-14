@@ -1,0 +1,23 @@
+.Social_comments_input_panel{
+    display: flex;
+    padding-left: var(--Social-space);
+    padding-bottom: var(--Social-space);
+}
+
+.Social_comments_image{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.Social_comments_input{
+    border-radius: var(--Social_comment_radius);
+    padding: 8px 20px;
+    border: 1px solid #ccd0d5;
+    font-family: inherit;
+    font-size: var(--Social-font-smallmeduim);
+    width: var(--Social-comment-width);
+    box-sizing: border-box;
+    outline: none;
+}

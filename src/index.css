@@ -2,8 +2,12 @@
   --Social-font-smallmeduim: 13px;
   --Social-font-meduim: 14px;
   --Social-color-number: #616770;
+  --Social-color-link: rgb(54, 88, 153);
   --Social-space: 10px;
   --Social-border-color: rgb(223, 226, 229);
+  --Social-bg-color: #eff1f3;
+  --Social-comment-width: 438px;
+  --Social_comment_radius: 20px;
 }
 
 body {

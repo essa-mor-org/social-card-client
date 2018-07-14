@@ -7,7 +7,7 @@ function SocialCardHeader({ image, profileText, time }) {
 	return (<div className="Social_header">
 		<div className="Social_header_column1">
 			<a className="Social_header_image_link" href="#">
-				<img className="Social_header_image" src={image} />
+				<img className="Social_header_image" src={image} alt=""/>
 			</a>
 			<a className="Social_header_name" href="#">{profileText}</a>
 			<a className="Social_header_time" href="#">{time}</a>
