@@ -11,6 +11,7 @@ exports[`SocialCardComments test renders correctly - no comments 1`] = `
   />
   <input
     className="Social_comments_input"
+    onKeyPress={[Function]}
     placeholder="Write a comment..."
     type="text"
   />
@@ -29,6 +30,7 @@ Array [
     />
     <input
         className="Social_comments_input"
+        onKeyPress={[Function]}
         placeholder="Write a comment..."
         type="text"
     />
