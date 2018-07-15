@@ -7,21 +7,21 @@ exports[`SocialCardReact test renders correctly 1`] = `
   <a
     className="Reaction_like Reaction_button"
     href="#"
-    onClick={undefined}
+    onClick={[Function]}
   >
     Like
   </a>
   <a
     className="Reaction_comment Reaction_button"
     href="#"
-    onClick={undefined}
+    onClick={[Function]}
   >
     Comment
   </a>
   <a
     className="Reaction_share Reaction_button"
     href="#"
-    onClick={undefined}
+    onClick={[Function]}
   >
     Share
   </a>
