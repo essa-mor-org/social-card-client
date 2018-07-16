@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import SocialCard from './components/social-card/SocialCard';
-
+import { fetchPosts } from './actions/Posts';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
+	componentDidMount() {
+		this.props.fetchPosts();
+	}
+
 	render() {
 		return (
 			<SocialCard />
@@ -12,4 +17,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect(()=>{}, { fetchPosts })(App);
