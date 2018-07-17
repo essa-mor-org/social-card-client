@@ -1,16 +1,18 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { apiMiddleware } from 'redux-api-middleware';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import rootReducer from '../reducers/index';
 
 const configureStore = preloadedState => {
+	const middlewares = [apiMiddleware];
+	const middlewareEnhancer = applyMiddleware(...middlewares);
+	const enhancers = [middlewareEnhancer];
+	const composedEnhancers = composeWithDevTools(...enhancers);
 	const store = createStore(
 		rootReducer,
 		preloadedState,
-		compose(
-			applyMiddleware(apiMiddleware),
-			window.devToolsExtension ? window.devToolsExtension() : f => f
-		)
+		composedEnhancers
 	);
 
 	if (module.hot) {
