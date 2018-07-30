@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
-import PostsReducer from './Posts';
+import entities from './entities/index';
 
-export default combineReducers({ posts: PostsReducer });
+export default entities;
