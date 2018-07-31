@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
 import React from 'react';
-import { Feed } from './Feed';
+import { SocialCardsContainer } from './SocialCardsContainer';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
@@ -19,17 +19,17 @@ const posts = fromJS({
 	}
 });
 
-describe('Feed test', () => {
+describe('SocialCardsContainer test', () => {
 	it('renders correctly', () => {
 		const tree = renderer
-			.create(<Feed posts={posts} fetchPosts={jest.fn()}/>)
+			.create(<SocialCardsContainer posts={posts} fetchPosts={jest.fn()}/>)
 			.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 
 	it('call fetchPosts', () => {
 		const callBack = jest.fn();
-		mount(<Feed posts={posts} fetchPosts={callBack} />);
+		mount(<SocialCardsContainer posts={posts} fetchPosts={callBack} />);
 		expect(callBack).toHaveBeenCalledTimes(1);
 	});
 });
