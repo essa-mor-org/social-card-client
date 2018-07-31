@@ -5,7 +5,7 @@ import { fetchPosts } from '../actions/Posts';
 import { postsSelector } from '../selectors/Posts';
 import SocialCard from '../components/social-card/SocialCard';
 
-export class Feed extends PureComponent {
+export class SocialCardsContainer extends PureComponent {
 	componentDidMount() {
 		this.props.fetchPosts();
 	}
@@ -32,4 +32,4 @@ const mapStateToProps = (state) => ({
 	posts: postsSelector(state)
 });
 
-export default connect(mapStateToProps, { fetchPosts })(Feed);
+export default connect(mapStateToProps, { fetchPosts })(SocialCardsContainer);
