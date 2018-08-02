@@ -9,7 +9,7 @@ import SocialCardComments from './comments/SocialCardComments';
 
 import './SocialCard.css';
 
-function SocialCard({ image, profileText, time, text, postImage, likes, comments, shares, profileImage }) {
+function SocialCard({ image, profileText, time, text, postImage, likes, comments, shares, profileImage, postComments }) {
 	return (<div className="Social_card">
 		<SocialCardHeader
 			image={image}
@@ -28,10 +28,7 @@ function SocialCard({ image, profileText, time, text, postImage, likes, comments
 		<SocialCardComments
 			onComment={() => { }}
 			profileImage={profileImage}
-			comments={[
-				{ id: 1, profileImage: 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/c0.0.48.48/p48x48/30571266_10211755395060285_621329575565066240_n.jpg?_nc_cat=0&oh=755d9aa650987a5b1519cdbaeeedcd8c&oe=5BEA6497', profileName: 'Tyler Schmidt', comment: 'Written by Lady Gaga' },
-				{ id: 2, profileImage: 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/c0.0.48.48/p48x48/30571266_10211755395060285_621329575565066240_n.jpg?_nc_cat=0&oh=755d9aa650987a5b1519cdbaeeedcd8c&oe=5BEA6497', profileName: 'Tyler Schmidt', comment: 'Man they confiscated my pages Have a great day' }
-			]} />
+			comments={postComments} />
 	</div>);
 }
 

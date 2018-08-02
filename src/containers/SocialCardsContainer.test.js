@@ -22,9 +22,11 @@ const posts = fromJS({
 });
 
 const store = getMockStore({
-	key: 'auth',
+	key: 'entities',
 	state: {}
 });
+
+store.getState = () => fromJS({});
 
 describe('SocialCardsContainer test', () => {
 	it('renders correctly', () => {
