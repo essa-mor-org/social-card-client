@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import SocialCard from '../components/social-card/SocialCard';
 import { makeGetPostCommentsSelector } from '../selectors/Comments';
 
-export function SocialCardContainer({ id, image, profileText, time, text, postImage, likes, comments, shares, profileImage, postComments }) {
+export function SocialCardContainer({ id, image, profileText, time, text, postImage, likes, shares, profileImage, postComments }) {
     return (<SocialCard
         id={id}
         image={image}
@@ -13,7 +13,6 @@ export function SocialCardContainer({ id, image, profileText, time, text, postIm
         text={text}
         postImage={postImage}
         likes={likes}
-        comments={comments}
         shares={shares}
         profileImage={profileImage}
         postComments={postComments} />);
