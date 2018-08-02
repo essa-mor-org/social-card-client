@@ -40,4 +40,8 @@ describe('Comments selector test', () => {
     it('post not exist - returns empty', () => {
         expect(makeGetPostCommentsSelector()(state, { id: 4 })).toEqual([]);
     });
+
+    it('empty state - returns empty', () => {
+        expect(makeGetPostCommentsSelector()(fromJS({}), { id: 2 })).toEqual([]);
+    });
 });
