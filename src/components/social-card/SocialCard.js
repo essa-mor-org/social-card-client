@@ -9,7 +9,7 @@ import SocialCardComments from './comments/SocialCardComments';
 
 import './SocialCard.css';
 
-function SocialCard({ image, profileText, time, text, postImage, likes, comments, shares, profileImage, postComments }) {
+function SocialCard({ image, profileText, time, text, postImage, likes, shares, profileImage, postComments }) {
 	return (<div className="Social_card">
 		<SocialCardHeader
 			image={image}
@@ -21,7 +21,7 @@ function SocialCard({ image, profileText, time, text, postImage, likes, comments
 		/>
 		<SocialCardReactions
 			likes={likes}
-			comments={comments}
+			comments={postComments.length}
 			shares={shares}
 		/>
 		<SocialCardReact onLike={() => { }} onComment={() => { }} onShare={() => { }} />
@@ -40,7 +40,6 @@ SocialCard.propTypes = {
 	text: PropTypes.string.isRequired,
 	postImage: PropTypes.string.isRequired,
 	likes: PropTypes.number,
-	comments: PropTypes.number,
 	shares: PropTypes.number,
 	profileImage: PropTypes.string.isRequired,
 	postComments: PropTypes.arrayOf(PropTypes.shape({

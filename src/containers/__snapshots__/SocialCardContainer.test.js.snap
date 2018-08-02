@@ -86,7 +86,7 @@ exports[`SocialCardContainer test renders correctly - with comments 1`] = `
       className="Social_reaction_number Social_reaction_fixed"
       href="#"
     >
-      2
+      1
        Comments
     </a>
     <a
@@ -246,13 +246,6 @@ exports[`SocialCardContainer test renders correctly 1`] = `
         157
       </a>
     </span>
-    <a
-      className="Social_reaction_number Social_reaction_fixed"
-      href="#"
-    >
-      2
-       Comments
-    </a>
     <a
       className="Social_reaction_number Social_reaction_fixed"
       href="#"

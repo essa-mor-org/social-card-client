@@ -21,7 +21,6 @@ export class SocialCardsContainer extends PureComponent {
 			text={post.get('text')}
 			postImage={post.get('postImage')}
 			likes={post.get('likes')}
-			comments={post.get('comments')}
 			shares={post.get('shares')}
 			profileImage={post.get('profileImage')} />));
 		return (<div>{postItems}</div>);
