@@ -138,54 +138,6 @@ exports[`SocialCardsContainer test renders correctly 1`] = `
         type="text"
       />
     </div>
-    <div
-      className="Comment_panel"
-    >
-      <img
-        alt=""
-        className="Social_comments_image"
-        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/c0.0.48.48/p48x48/30571266_10211755395060285_621329575565066240_n.jpg?_nc_cat=0&oh=755d9aa650987a5b1519cdbaeeedcd8c&oe=5BEA6497"
-      />
-      <div
-        className="Comment_comment_panel"
-      >
-        <a
-          className="Comment_profile"
-          href="#"
-        >
-          Tyler Schmidt
-        </a>
-        <span
-          className="Comment_comment"
-        >
-          Written by Lady Gaga
-        </span>
-      </div>
-    </div>
-    <div
-      className="Comment_panel"
-    >
-      <img
-        alt=""
-        className="Social_comments_image"
-        src="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/c0.0.48.48/p48x48/30571266_10211755395060285_621329575565066240_n.jpg?_nc_cat=0&oh=755d9aa650987a5b1519cdbaeeedcd8c&oe=5BEA6497"
-      />
-      <div
-        className="Comment_comment_panel"
-      >
-        <a
-          className="Comment_profile"
-          href="#"
-        >
-          Tyler Schmidt
-        </a>
-        <span
-          className="Comment_comment"
-        >
-          Man they confiscated my pages Have a great day
-        </span>
-      </div>
-    </div>
   </div>
 </div>
 `;
