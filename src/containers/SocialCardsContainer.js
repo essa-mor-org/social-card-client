@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchPosts } from '../actions/Posts';
 import { postsSelector } from '../selectors/Posts';
-import SocialCard from '../components/social-card/SocialCard';
+import SocialCardContainer from './SocialCardContainer';
 
 export class SocialCardsContainer extends PureComponent {
 	componentDidMount() {
@@ -12,7 +12,7 @@ export class SocialCardsContainer extends PureComponent {
 
 	render() {
 		const { posts } = this.props;
-		const postItems = posts.valueSeq().map(post => (<SocialCard
+		const postItems = posts.valueSeq().map(post => (<SocialCardContainer
 			key={post.get('id')}
 			id={post.get('id')}
 			image={post.get('image')}
