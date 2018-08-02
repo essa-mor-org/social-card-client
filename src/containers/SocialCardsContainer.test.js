@@ -1,8 +1,10 @@
 import { fromJS } from 'immutable';
 import React from 'react';
-import { SocialCardsContainer } from './SocialCardsContainer';
+import MockProvider, { getMockStore } from 'redux-mock-provider';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
+
+import { SocialCardsContainer } from './SocialCardsContainer';
 
 const posts = fromJS({
 	'1': {
@@ -19,17 +21,22 @@ const posts = fromJS({
 	}
 });
 
+const store = getMockStore({
+	key: 'auth',
+	state: {}
+});
+
 describe('SocialCardsContainer test', () => {
 	it('renders correctly', () => {
 		const tree = renderer
-			.create(<SocialCardsContainer posts={posts} fetchPosts={jest.fn()}/>)
+			.create(<MockProvider store={store}><SocialCardsContainer posts={posts} fetchPosts={jest.fn()} /></MockProvider>)
 			.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 
 	it('call fetchPosts', () => {
 		const callBack = jest.fn();
-		mount(<SocialCardsContainer posts={posts} fetchPosts={callBack} />);
+		mount(<MockProvider store={store}><SocialCardsContainer posts={posts} fetchPosts={callBack} /></MockProvider>);
 		expect(callBack).toHaveBeenCalledTimes(1);
 	});
 });
