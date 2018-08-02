@@ -5,12 +5,12 @@ const INITIAL_STATE = new Map({ byId: {} });
 
 export default function (state = INITIAL_STATE, action) {
 	switch (action.type) {
-	default: {
-		const postComments = fromJS(action).getIn(['payload', 'entities', 'postComments'], {});
-		if (!empty(postComments)) {
-			return state.set('byId', postComments);
+		default: {
+			const postComments = fromJS(action).getIn(['payload', 'entities', 'postComments'], {});
+			if (!empty(postComments)) {
+				return state.set('byId', postComments);
+			}
+			return state;
 		}
-		return state;
-	}
 	}
 }
