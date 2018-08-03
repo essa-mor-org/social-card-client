@@ -20,6 +20,11 @@
 	background-position: 0 -180px;
 }
 
+.Reaction_like_active::before{
+	background-size: 20px 1368px;
+	background-position: 0 -160px;
+}
+
 .Reaction_comment::before{
 	background-size: 20px 1368px;
 	background-position: 0 -120px;

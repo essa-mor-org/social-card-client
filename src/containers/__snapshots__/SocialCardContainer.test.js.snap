@@ -102,21 +102,21 @@ exports[`SocialCardContainer test renders correctly - with comments 1`] = `
   >
     <a
       className="Reaction_like Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Like
     </a>
     <a
       className="Reaction_comment Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Comment
     </a>
     <a
       className="Reaction_share Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Share
@@ -259,21 +259,21 @@ exports[`SocialCardContainer test renders correctly 1`] = `
   >
     <a
       className="Reaction_like Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Like
     </a>
     <a
       className="Reaction_comment Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Comment
     </a>
     <a
       className="Reaction_share Reaction_button"
-      href="#"
+      href="javascript:void(0);"
       onClick={[Function]}
     >
       Share

@@ -6,7 +6,7 @@ import './ReactionButton.css';
 
 function ReactionButton({ className, text, onClick }) {
 	const cls = classNames(className, 'Reaction_button');
-	return (<a className={cls} href="#" onClick={onClick}>{text}</a>);
+	return (<a className={cls} href="javascript:void(0);" onClick={onClick}>{text}</a>);
 }
 
 ReactionButton.propTypes = {

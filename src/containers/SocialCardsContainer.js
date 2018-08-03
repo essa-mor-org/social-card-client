@@ -20,6 +20,7 @@ export class SocialCardsContainer extends PureComponent {
 			time={post.get('time')}
 			text={post.get('text')}
 			postImage={post.get('postImage')}
+			like={post.get('like')}
 			likes={post.get('likes')}
 			shares={post.get('shares')}
 			profileImage={post.get('profileImage')} />));
