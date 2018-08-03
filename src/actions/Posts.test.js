@@ -32,6 +32,24 @@ describe('Posts actions', () => {
 					POSTS_LIKE_SUCCESS,
 					POSTS_LIKE_FAILURE],
 				endpoint: `${endpoint}/1`,
+				body: JSON.stringify({ likes: 2, id: 1, like: true}),
+				method: 'PATCH',
+				headers: {
+					"Accept": "application/json",
+					"Content-Type": "application/json",
+				}
+			}
+		};
+		expect(likePost({ id: 1, likes: 1, like: false })).toEqual(expectedAction);
+	});
+
+	it('should create an action to dislike posts', () => {
+		const expectedAction = {
+			[RSAA]: {
+				types: [POSTS_LIKE_REQUEST,
+					POSTS_LIKE_SUCCESS,
+					POSTS_LIKE_FAILURE],
+				endpoint: `${endpoint}/1`,
 				body: JSON.stringify({ likes: 0, id: 1, like: false}),
 				method: 'PATCH',
 				headers: {
