@@ -7,3 +7,7 @@
 	padding-right: calc(var(--Social-space) * 6);
 	border-bottom: 1px solid var(--Social-border-color);
 }
+
+.Reaction_like_text_active{
+	color: rgb(53, 120, 229);
+}

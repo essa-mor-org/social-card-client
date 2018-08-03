@@ -1,26 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocialCardReact test renders correctly 1`] = `
+exports[`SocialCardReact test renders correctly - like is true 1`] = `
 <div
   className="Social_react"
 >
   <a
-    className="Reaction_like Reaction_button"
-    href="#"
+    className="Reaction_like_active Reaction_like_text_active Reaction_button"
+    href="javascript:void(0);"
     onClick={[Function]}
   >
     Like
   </a>
   <a
     className="Reaction_comment Reaction_button"
-    href="#"
+    href="javascript:void(0);"
     onClick={[Function]}
   >
     Comment
   </a>
   <a
     className="Reaction_share Reaction_button"
-    href="#"
+    href="javascript:void(0);"
+    onClick={[Function]}
+  >
+    Share
+  </a>
+</div>
+`;
+
+exports[`SocialCardReact test renders correctly 1`] = `
+<div
+  className="Social_react"
+>
+  <a
+    className="Reaction_like Reaction_button"
+    href="javascript:void(0);"
+    onClick={[Function]}
+  >
+    Like
+  </a>
+  <a
+    className="Reaction_comment Reaction_button"
+    href="javascript:void(0);"
+    onClick={[Function]}
+  >
+    Comment
+  </a>
+  <a
+    className="Reaction_share Reaction_button"
+    href="javascript:void(0);"
     onClick={[Function]}
   >
     Share

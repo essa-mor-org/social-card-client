@@ -3,7 +3,7 @@
 exports[`ReactionButton test renders correctly 1`] = `
 <a
   className="like_class Reaction_button"
-  href="#"
+  href="javascript:void(0);"
   onClick={undefined}
 >
   Like
