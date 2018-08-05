@@ -16,7 +16,8 @@ const posts = fromJS({
 		'postImage': 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-9/36907526_10155523573880933_4550184912837148672_n.jpg?_nc_cat=0&oh=907c9bbce64ffe2808a821fb673f140d&oe=5BA005E7',
 		'likes': 157,
 		'shares': 3,
-		'profileImage': 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p48x48/14572897_10209280775468762_3731006062202010506_n.jpg?_nc_cat=0&oh=41eba23bde8e0c43e709a6a9f9867c55&oe=5BDD6AD2'
+		'profileImage': 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p48x48/14572897_10209280775468762_3731006062202010506_n.jpg?_nc_cat=0&oh=41eba23bde8e0c43e709a6a9f9867c55&oe=5BDD6AD2',
+		'profileName': "Essa Mor"
 	}
 });
 
