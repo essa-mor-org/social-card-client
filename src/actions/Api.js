@@ -12,3 +12,12 @@ export const patchApi = (types, endpoint, body) => ({
 		}
 	}
 });
+
+export const postApi = (types, endpoint, body) => ({
+	[RSAA]: {
+		types, endpoint, body, method: 'POST', headers: {
+			"Accept": "application/json",
+			"Content-Type": "application/json"
+		}
+	}
+});

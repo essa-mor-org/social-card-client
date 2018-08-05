@@ -18,7 +18,8 @@ describe('SocialCardContainer test', () => {
                 profileImage={'https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p48x48/14572897_10209280775468762_3731006062202010506_n.jpg?_nc_cat=0&oh=41eba23bde8e0c43e709a6a9f9867c55&oe=5BDD6AD2'}
                 postComments={[]} 
                 likePost={jest.fn()}
-                sharePost={jest.fn()} />)
+                sharePost={jest.fn()} 
+                commentOnPost={jest.fn()} />)
             .toJSON();
         expect(tree).toMatchSnapshot();
     });
@@ -42,7 +43,8 @@ describe('SocialCardContainer test', () => {
                     "comment": "Written by Lady Gaga"
                 }]} 
                 likePost={jest.fn()}
-                sharePost={jest.fn()}/>)
+                sharePost={jest.fn()}
+                commentOnPost={jest.fn()}/>)
             .toJSON();
         expect(tree).toMatchSnapshot();
     });

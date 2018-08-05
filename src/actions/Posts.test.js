@@ -13,13 +13,15 @@ import {
 	POSTS_SHARE_FAILURE
 } from './Posts';
 
+const postsUrl = `${endpoint}/posts`;
+
 const getOutput = () => ({
 	[RSAA]: {
 		types: [POSTS_GET_REQUEST, {
 			payload: () => { },
 			type: POSTS_GET_SUCCESS,
 		}, POSTS_GET_FAILURE],
-		endpoint: endpoint,
+		endpoint: `${postsUrl}?_embed=postComments`,
 		method: 'GET'
 	}
 });
@@ -44,19 +46,19 @@ describe('Posts actions', () => {
 	});
 
 	it('should create an action to like posts', () => {
-		const expectedAction = patchOutput([POSTS_LIKE_REQUEST, POSTS_LIKE_SUCCESS, POSTS_LIKE_FAILURE], `${endpoint}/1`,
+		const expectedAction = patchOutput([POSTS_LIKE_REQUEST, POSTS_LIKE_SUCCESS, POSTS_LIKE_FAILURE], `${postsUrl}/1`,
 			{ likes: 2, id: 1, like: true });
 		expect(likePost({ id: 1, likes: 1, like: false })).toEqual(expectedAction);
 	});
 
 	it('should create an action to dislike posts', () => {
-		const expectedAction = patchOutput([POSTS_LIKE_REQUEST, POSTS_LIKE_SUCCESS, POSTS_LIKE_FAILURE], `${endpoint}/1`,
+		const expectedAction = patchOutput([POSTS_LIKE_REQUEST, POSTS_LIKE_SUCCESS, POSTS_LIKE_FAILURE], `${postsUrl}/1`,
 			{ likes: 0, id: 1, like: false });
 		expect(likePost({ id: 1, likes: 1, like: true })).toEqual(expectedAction);
 	});
 
 	it('should create an action to share posts', () => {
-		const expectedAction = patchOutput([POSTS_SHARE_REQUEST, POSTS_SHARE_SUCCESS, POSTS_SHARE_FAILURE], `${endpoint}/1`,
+		const expectedAction = patchOutput([POSTS_SHARE_REQUEST, POSTS_SHARE_SUCCESS, POSTS_SHARE_FAILURE], `${postsUrl}/1`,
 			{ shares: 2, id: 1 });
 		expect(sharePost({ id: 1, shares: 1 })).toEqual(expectedAction);
 	});
