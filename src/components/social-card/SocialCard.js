@@ -9,8 +9,8 @@ import SocialCardComments from './comments/SocialCardComments';
 
 import './SocialCard.css';
 
-function onComment(id, commentCallBack, comment){
-	//commentCallBack({id, comment});
+function onComment({postId,commentCallBack, profileName, profileImage}, comment){
+	commentCallBack({postId, profileName, profileImage, comment});
 }
 
 function SocialCard({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage,
@@ -31,7 +31,7 @@ function SocialCard({ id, image, profileText, time, text, postImage, like, likes
 		/>
 		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onComment={() => { }} onShare={shareCallBack} />
 		<SocialCardComments
-			onComment={onComment.bind(this,id,commentCallBack)}
+			onComment={onComment.bind(this,{postId: id,commentCallBack, profileName: profileText, profileImage} )}
 			profileImage={profileImage}
 			comments={postComments} />
 	</div>);

@@ -47,9 +47,9 @@ export const sharePost = ({ id, shares }) => {
 		JSON.stringify({ shares: ++shares, id }));
 };
 
-export const commentOnPost = ({ id, comment }) => {
+export const commentOnPost = ({postId, profileName, profileImage, comment}) => {
 	return postApi(
 		[POSTS_COMMENT_REQUEST, POSTS_COMMENT_SUCCESS, POSTS_COMMENT_FAILURE]
 		, `${endpoint}/postComments`,
-		JSON.stringify({ comment, id }));
+		JSON.stringify({postId, profileImage, profileName, comment}));
 };
