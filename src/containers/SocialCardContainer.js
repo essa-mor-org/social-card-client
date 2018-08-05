@@ -6,7 +6,7 @@ import { makeGetPostCommentsSelector } from '../selectors/Comments';
 import { likePost, sharePost, commentOnPost } from '../actions/Posts';
 
 export function SocialCardContainer({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage,
-    postComments, likePost, sharePost, commentOnPost }) {
+    profileName, postComments, likePost, sharePost, commentOnPost }) {
     return (<SocialCard
         id={id}
         image={image}
@@ -18,6 +18,7 @@ export function SocialCardContainer({ id, image, profileText, time, text, postIm
         likes={likes}
         shares={shares}
         profileImage={profileImage}
+        profileName={profileName}
         postComments={postComments}
         likeCallBack={likePost}
         shareCallBack={sharePost} 

@@ -13,7 +13,7 @@ function onComment({postId,commentCallBack, profileName, profileImage}, comment)
 	commentCallBack({postId, profileName, profileImage, comment});
 }
 
-function SocialCard({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage,
+function SocialCard({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage, profileName, 
 	postComments, likeCallBack, shareCallBack, commentCallBack }) {
 	return (<div className="Social_card">
 		<SocialCardHeader
@@ -31,7 +31,7 @@ function SocialCard({ id, image, profileText, time, text, postImage, like, likes
 		/>
 		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onComment={() => { }} onShare={shareCallBack} />
 		<SocialCardComments
-			onComment={onComment.bind(this,{postId: id,commentCallBack, profileName: profileText, profileImage} )}
+			onComment={onComment.bind(this,{postId: id,commentCallBack, profileName, profileImage} )}
 			profileImage={profileImage}
 			comments={postComments} />
 	</div>);
@@ -48,6 +48,7 @@ SocialCard.propTypes = {
 	likes: PropTypes.number,
 	shares: PropTypes.number,
 	profileImage: PropTypes.string.isRequired,
+	profileName: PropTypes.string.isRequired,
 	postComments: PropTypes.arrayOf(PropTypes.shape({
 		profileImage: PropTypes.string.isRequired,
 		profileName: PropTypes.string.isRequired,
