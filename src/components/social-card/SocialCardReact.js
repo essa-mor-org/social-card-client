@@ -11,7 +11,6 @@ class SocialCardReact extends PureComponent {
 		super(props);
 		this.like = this.like.bind(this);
 		this.share = this.share.bind(this);
-		this.comment = this.comment.bind(this);
 	}
 
 	like() {
@@ -22,11 +21,6 @@ class SocialCardReact extends PureComponent {
 	share() {
 		const { id, shares, onShare } = this.props;
 		onShare({ id, shares });
-	}
-
-	comment(event) {
-		const { id, onComment } = this.props;
-		onComment({ id, comment: event.target.value });
 	}
 
 	render() {
