@@ -32,6 +32,6 @@ describe('SocialCardReact test', () => {
 		wrapper.find('.Reaction_comment').simulate('click');
 		expect(commentCallBack).toHaveBeenCalledTimes(1);
 		wrapper.find('.Reaction_share').simulate('click');
-		expect(shareCallBack).toHaveBeenCalledTimes(1);
+		expect(shareCallBack).toHaveBeenCalledWith({id:1, shares:0});
 	});
 });
