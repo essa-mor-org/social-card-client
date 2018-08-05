@@ -23,7 +23,6 @@ describe('SocialCard test', () => {
 			shareCallBack={jest.fn()}
 			text="" />);
 		const input = wrapper.find('.Social_comments_input');
-		console.log('input:', input);
 		input.simulate('keyPress', { key: 'Enter', target: { value: 'hi' } });
 		expect(commentCallBack).toHaveBeenCalledWith({ postId, profileName, profileImage, comment });
 	});
