@@ -36,7 +36,7 @@ describe('SocialCardComments test', () => {
 		const input = wrapper.find('.Social_comments_input');
 		input.simulate('keyPress',{key: 'Enter', target:{value:'abc'}});
 		expect(commentCallBack).toHaveBeenCalledWith('abc');
-		expect(wrapper.state('comment')).toBe('a');
+		expect(wrapper.state('comment')).toBe('');
 	});
 
 	it('renders correctly - add comment do not press enter', () => {
