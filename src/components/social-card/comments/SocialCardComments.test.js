@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialCardComments from './SocialCardComments';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('SocialCardComments test', () => {
 	it('renders correctly - no comments', () => {
@@ -30,11 +30,13 @@ describe('SocialCardComments test', () => {
 
 	it('renders correctly - add comment and press enter', () => {
 		const commentCallBack = jest.fn();
-		const wrapper = shallow(<SocialCardComments
+		const wrapper = mount(<SocialCardComments
 			onComment={commentCallBack}
 			profileImage="https://scontent.ftlv4-1.fna.fbcdn.net/v/t1.0-1/p80x80/n.jpg" />);
-		wrapper.find('.Social_comments_input').simulate('keyPress',{key: 'Enter', target:{value:'abc'}});
+		const input = wrapper.find('.Social_comments_input');
+		input.simulate('keyPress',{key: 'Enter', target:{value:'abc'}});
 		expect(commentCallBack).toHaveBeenCalledWith('abc');
+		expect(wrapper.state('comment')).toBe('a');
 	});
 
 	it('renders correctly - add comment do not press enter', () => {

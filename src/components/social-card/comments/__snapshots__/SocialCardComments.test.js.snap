@@ -11,9 +11,11 @@ exports[`SocialCardComments test renders correctly - no comments 1`] = `
   />
   <input
     className="Social_comments_input"
+    onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="Write a comment..."
     type="text"
+    value=""
   />
 </div>
 `;
@@ -30,9 +32,11 @@ Array [
     />
     <input
         className="Social_comments_input"
+        onChange={[Function]}
         onKeyPress={[Function]}
         placeholder="Write a comment..."
         type="text"
+        value=""
     />
 </div>,
   <div
