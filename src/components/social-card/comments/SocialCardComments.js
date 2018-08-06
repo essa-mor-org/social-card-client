@@ -20,7 +20,7 @@ class SocialCardComments extends PureComponent {
 		if (event.key === 'Enter') {
 			const { onComment } = this.props;
 			onComment(event.target.value);
-			this.setState({ comment: 'a' });
+			this.setState({ comment: '' });
 		}
 	}
 
