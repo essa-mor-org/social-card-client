@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialCardCommentsContainer test renders correctly 1`] = `
+<div
+  className="Social_comments_input_panel"
+>
+  <img
+    alt=""
+    className="Social_comments_image"
+    src="profileImage"
+  />
+  <input
+    className="Social_comments_input"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Write a comment..."
+    type="text"
+    value=""
+  />
+</div>
+`;
