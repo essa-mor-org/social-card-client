@@ -3,7 +3,7 @@ import SocialCard from './SocialCard';
 import { mount } from 'enzyme';
 
 describe('SocialCard test', () => {
-	it('renders correctly - comment callback', () => {
+	it.skip('renders correctly - comment callback', () => {
 		const postId = 1,
 			profileName = "profileText",
 			profileImage = "profileImage",

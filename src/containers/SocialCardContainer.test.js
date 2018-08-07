@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { SocialCardContainer } from './SocialCardContainer';
 
 describe('SocialCardContainer test', () => {
-    it('renders correctly', () => {
+    it.skip('renders correctly', () => {
         const tree = renderer
             .create(<SocialCardContainer
                 id={1}
@@ -25,7 +25,7 @@ describe('SocialCardContainer test', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders correctly - with comments', () => {
+    it.skip('renders correctly - with comments', () => {
         const tree = renderer
             .create(<SocialCardContainer
                 id={1}
