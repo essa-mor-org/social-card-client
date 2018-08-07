@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchPosts, likePost, sharePost } from '../actions/Posts';
 import { getPostsSelector } from '../selectors/Posts';
+// import SocialCardContainer from './SocialCardContainer';
 import SocialCard from '../components/social-card/SocialCard';
 
 export class SocialCardsContainer extends PureComponent {
