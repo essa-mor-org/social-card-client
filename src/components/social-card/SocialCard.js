@@ -5,16 +5,12 @@ import SocialCardHeader from './SocialCardHeader';
 import SocialCardPost from './SocialCardPost';
 import SocialCardReactions from './SocialCardReactions';
 import SocialCardReact from './SocialCardReact';
-import SocialCardComments from './comments/SocialCardComments';
+import SocialCardCommentsContainer from '../../containers/comments/SocialCardCommentsContainer';
 
 import './SocialCard.css';
 
-function onComment({postId,commentCallBack, profileName, profileImage}, comment){
-	commentCallBack({postId, profileName, profileImage, comment});
-}
-
 function SocialCard({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage, profileName, 
-	postComments, likeCallBack, shareCallBack, commentCallBack }) {
+	postComments, likeCallBack, shareCallBack }) {
 	return (<div className="Social_card">
 		<SocialCardHeader
 			image={image}
@@ -30,10 +26,7 @@ function SocialCard({ id, image, profileText, time, text, postImage, like, likes
 			shares={shares}
 		/>
 		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onComment={() => { }} onShare={shareCallBack} />
-		<SocialCardComments
-			onComment={onComment.bind(this,{postId: id,commentCallBack, profileName, profileImage} )}
-			profileImage={profileImage}
-			comments={postComments} />
+		<SocialCardCommentsContainer id={id} />
 	</div>);
 }
 
@@ -49,15 +42,9 @@ SocialCard.propTypes = {
 	shares: PropTypes.number,
 	profileImage: PropTypes.string.isRequired,
 	profileName: PropTypes.string.isRequired,
-	postComments: PropTypes.arrayOf(PropTypes.shape({
-		profileImage: PropTypes.string.isRequired,
-		profileName: PropTypes.string.isRequired,
-		comment: PropTypes.string.isRequired,
-		id: PropTypes.number.isRequired
-	})),
+	postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
 	likeCallBack: PropTypes.func.isRequired,
-	shareCallBack: PropTypes.func.isRequired,
-	commentCallBack: PropTypes.func.isRequired
+	shareCallBack: PropTypes.func.isRequired
 };
 
 export default SocialCard;
