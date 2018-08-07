@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 import { makeGetPostCommentsSelector } from './Comments';
 
-const state = fromJS({
+let state = fromJS({
     entities: {
         posts: { byId: { '1': { 'postComments': [1] }, '2': { 'postComments': [1, 2] }, '3': { 'postComments': [] } } },
         postComments: { byId: { '1': { 'id': 1 }, '2': { 'id': 2 } } }
@@ -9,6 +9,10 @@ const state = fromJS({
 });
 
 describe('Comments selector test', () => {
+    beforeEach(()=>{
+        makeGetPostCommentsSelector().resetRecomputations();
+    });
+
     it('return result - 1 comment', () => {
         expect(makeGetPostCommentsSelector()(state, { id: 1 })).toEqual([{
             "comment": undefined,
@@ -43,5 +47,16 @@ describe('Comments selector test', () => {
 
     it('empty state - returns empty', () => {
         expect(makeGetPostCommentsSelector()(fromJS({}), { id: 2 })).toEqual([]);
+    });
+
+    it('manage to memorize', () => {
+        const selector = makeGetPostCommentsSelector();
+        selector(state, { id: 1 });
+        expect(selector.recomputations()).toBe(1);
+        state = state.updateIn(['entities', 'postComments', 'byId'],postComments => postComments.set('3',  fromJS({ 'id': 3 })));
+        expect(selector.recomputations()).toBe(1);
+        state = state.updateIn(['entities', 'posts', 'byId', '1', 'postComments'], postComments => postComments.push(2));
+        selector(state, { id: 1 });
+        expect(selector.recomputations()).toBe(2);
     });
 });

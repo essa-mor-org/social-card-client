@@ -5,12 +5,12 @@ import { POSTS_LIKE_SUCCESS, POSTS_SHARE_SUCCESS } from '../../actions/Posts';
 
 describe('posts reducer', () => {
 	it('should return the initial state', () => {
-		expect(reducer(undefined, {}).toJS()).toEqual({ byId: {} });
+		expect(reducer(undefined, {}).toJS()).toEqual({ byId: {}, allIds: [] });
 	});
 
 	it('should update state from payload', () => {
-		const action = { payload: { entities: { posts: { '1': { 'a': 'b' } } } } };
-		expect(reducer(undefined, action).toJS()).toEqual({ byId: { '1': { 'a': 'b' } } });
+		const action = { payload: { entities: { posts: { '1': { 'a': 'b' } } }, result: [1] } };
+		expect(reducer(undefined, action).toJS()).toEqual({ byId: { '1': { 'a': 'b' } }, allIds: [1] });
 	});
 
 	it('like action update reducer', () => {
