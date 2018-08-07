@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchPosts } from '../actions/Posts';
-import { postsSelector } from '../selectors/Posts';
+import { getPostsSelector } from '../selectors/Posts';
 import SocialCardContainer from './SocialCardContainer';
 
 export class SocialCardsContainer extends PureComponent {
@@ -30,7 +30,7 @@ export class SocialCardsContainer extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-	posts: postsSelector(state)
+	posts: getPostsSelector(state)
 });
 
 export default connect(mapStateToProps, { fetchPosts })(SocialCardsContainer);

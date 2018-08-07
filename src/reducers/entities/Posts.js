@@ -3,7 +3,7 @@ import empty from 'is-empty';
 
 import { POSTS_LIKE_SUCCESS, POSTS_SHARE_SUCCESS } from '../../actions/Posts';
 
-const INITIAL_STATE = fromJS({ byId: {} });
+const INITIAL_STATE = fromJS({ byId: {}, allIds: [] });
 
 function likePost(state, action) {
 	const { id, like, likes } = action.payload;
@@ -19,8 +19,9 @@ function sharePost(state, action) {
 function mergePosts(state, action) {
 	const p = fromJS(action);
 	const posts = p.getIn(['payload', 'entities', 'posts'], {});
+	const result = p.getIn(['payload', 'result'], []);
 	if (!empty(posts)) {
-		return state.set('byId', posts);
+		return state.set('byId', posts).set('allIds', result);
 	}
 	return state;
 }
