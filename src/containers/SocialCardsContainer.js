@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchPosts, likePost, sharePost } from '../actions/Posts';
-import { getPostsSelector } from '../selectors/Posts';
-import SocialCard from '../components/social-card/SocialCard';
+import { fetchPosts } from '../actions/Posts';
+import { getPostsIds } from '../selectors/Posts';
+import SocialCardContainer from './SocialCardContainer';
 
 export class SocialCardsContainer extends PureComponent {
 	componentDidMount() {
@@ -11,29 +11,16 @@ export class SocialCardsContainer extends PureComponent {
 	}
 
 	render() {
-		const { posts, likePost, sharePost } = this.props;
-		const postItems = posts.valueSeq().map(post => (<SocialCard
-			key={post.get('id')}
-			id={post.get('id')}
-			image={post.get('image')}
-			profileText={post.get('profileText')}
-			time={post.get('time')}
-			text={post.get('text')}
-			postImage={post.get('postImage')}
-			like={post.get('like')}
-			likes={post.get('likes')}
-			shares={post.get('shares')}
-			profileImage={post.get('profileImage')}
-			profileName={post.get('profileName')}
-			postComments={post.get('postComments').toJS()} 
-			likeCallBack={likePost}
-        	shareCallBack={sharePost} />));
+		const { postsIds } = this.props;
+		const postItems = postsIds.map(id => (<SocialCardContainer
+			key={id}
+			id={id} />));
 		return (<div>{postItems}</div>);
 	}
 }
 
 const mapStateToProps = (state) => ({
-	posts: getPostsSelector(state)
+	postsIds: getPostsIds(state)
 });
 
-export default connect(mapStateToProps, { fetchPosts, likePost, sharePost })(SocialCardsContainer);
+export default connect(mapStateToProps, { fetchPosts })(SocialCardsContainer);

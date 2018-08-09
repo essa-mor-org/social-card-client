@@ -1,17 +1,7 @@
-import { createSelector,createSelectorCreator, defaultMemoize } from 'reselect';
 import { fromJS } from 'immutable';
 
-const getPosts = state => state.getIn(['entities', 'posts'], fromJS({}));
+const getPostsIds = state => state.getIn(['entities', 'posts', 'allIds'], fromJS([]));
 
-const postEqualityCheck = (previousVal, currentVal) => {
-    const normlizePrevVal = previousVal.get('byId').map(post => post.delete('postComments'));
-    const normlizeCurVal = currentVal.get('byId').map(post => post.delete('postComments'));
-    return normlizePrevVal.equals(normlizeCurVal);
-}
+const getPost = (state, { id }) => state.getIn(['entities', 'posts', 'byId', id.toString()], fromJS({}));
 
-const postsSelectorCreator = createSelectorCreator(defaultMemoize, postEqualityCheck);
-const getPostsSelector = createSelector(
-    [getPosts],
-    (posts) => posts.get('allIds').map(id => posts.get('byId').get(id.toString()))
-)
-export { getPostsSelector };
+export { getPostsIds, getPost };
