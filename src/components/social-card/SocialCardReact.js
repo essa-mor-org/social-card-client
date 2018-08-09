@@ -40,7 +40,7 @@ SocialCardReact.propTypes = {
 	likes: PropTypes.number,
 	shares: PropTypes.number,
 	onLike: PropTypes.func.isRequired,
-	onComment: PropTypes.func.isRequired,
+	onComment: PropTypes.func,
 	onShare: PropTypes.func.isRequired
 };
 

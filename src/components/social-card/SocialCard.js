@@ -27,7 +27,7 @@ class SocialCard extends PureComponent {
 			comments={postComments.length}
 			shares={shares}
 		/>
-		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onComment={() => { }} onShare={shareCallBack} />
+		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onShare={shareCallBack} />
 		<SocialCardCommentsContainer id={id} />
 	</div>);
 }
