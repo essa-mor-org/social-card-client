@@ -45,7 +45,7 @@ SocialCard.propTypes = {
 	shares: PropTypes.number,
 	profileImage: PropTypes.string.isRequired,
 	profileName: PropTypes.string.isRequired,
-	// postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
+	postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
 	likeCallBack: PropTypes.func.isRequired,
 	shareCallBack: PropTypes.func.isRequired
 };
