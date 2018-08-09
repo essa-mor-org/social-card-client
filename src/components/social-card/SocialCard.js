@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import SocialCardHeader from './SocialCardHeader';
@@ -9,8 +9,10 @@ import SocialCardCommentsContainer from '../../containers/comments/SocialCardCom
 
 import './SocialCard.css';
 
-function SocialCard({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage, profileName, 
-	postComments, likeCallBack, shareCallBack }) {
+class SocialCard extends PureComponent {
+	render() {
+		const { id, image, profileText, time, text, postImage, like, likes, shares, profileImage, profileName,
+			postComments, likeCallBack, shareCallBack } = this.props;
 	return (<div className="Social_card">
 		<SocialCardHeader
 			image={image}
@@ -29,6 +31,7 @@ function SocialCard({ id, image, profileText, time, text, postImage, like, likes
 		<SocialCardCommentsContainer id={id} />
 	</div>);
 }
+}
 
 SocialCard.propTypes = {
 	id: PropTypes.number.isRequired,
@@ -42,7 +45,7 @@ SocialCard.propTypes = {
 	shares: PropTypes.number,
 	profileImage: PropTypes.string.isRequired,
 	profileName: PropTypes.string.isRequired,
-	postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
+	// postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
 	likeCallBack: PropTypes.func.isRequired,
 	shareCallBack: PropTypes.func.isRequired
 };

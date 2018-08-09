@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import empty from 'is-empty';
 
 import './SocialCardPost.css';
 
-function SocialCardPost({ text, image }) {
-	return (<React.Fragment>
-		{!empty(text) && <div className="Social_post_text">
-			{text}
-		</div>}
-		<a href="#">
-			<img className="Social_post_image" src={image} alt=""/>
-		</a>
-	</React.Fragment>);
+class SocialCardPost extends PureComponent {
+	render() {
+		const { text, image } = this.props;
+		return (<React.Fragment>
+			{!empty(text) && <div className="Social_post_text">
+				{text}
+			</div>}
+			<a href="#">
+				<img className="Social_post_image" src={image} alt="" />
+			</a>
+		</React.Fragment>);
+	}
 }
 
 SocialCardPost.propTypes = {
