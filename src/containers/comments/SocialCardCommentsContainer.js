@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import SocialCardComments from '../../components/social-card/comments/SocialCardComments';
 import { makeGetPostCommentsSelector } from '../../selectors/Comments';
+import { getPost } from '../../selectors/Posts';
 import { commentOnPost } from '../../actions/Posts';
 
 export class SocialCardCommentsContainer extends PureComponent {
@@ -27,13 +28,14 @@ export class SocialCardCommentsContainer extends PureComponent {
 
 const makeMapStateToProps = () => {
     const getPostCommentsSelector = makeGetPostCommentsSelector();
-    const mapStateToProps = (state, ownProps) => (
-        {
+    const mapStateToProps = (state, ownProps) => {
+        const post = getPost(state, ownProps).toJS();
+        return {
             postComments: getPostCommentsSelector(state, ownProps),
-            profileName: state.getIn(['entities', 'posts', 'byId', ownProps.id.toString(), 'profileName']),
-            profileImage: state.getIn(['entities', 'posts', 'byId', ownProps.id.toString(), 'profileImage'])
+            profileName: post.profileName,
+            profileImage: post.profileImage
         }
-    );
+    };
     return mapStateToProps
 };
 

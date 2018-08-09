@@ -2,11 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SocialCard from '../components/social-card/SocialCard';
-import { makeGetPostCommentsSelector } from '../selectors/Comments';
+import { getPost } from '../selectors/Posts';
 import { likePost, sharePost, commentOnPost } from '../actions/Posts';
 
-export function SocialCardContainer({ id, image, profileText, time, text, postImage, like, likes, shares, profileImage,
-    profileName, postComments, likePost, sharePost, commentOnPost }) {
+export function SocialCardContainer({post, likePost, sharePost, commentOnPost}) {
+    const { id, image, profileText, time, text, postImage, like, likes, shares, profileImage,
+        profileName, postComments } = post.toJS();
+        
     return (<SocialCard
         id={id}
         image={image}
@@ -25,14 +27,10 @@ export function SocialCardContainer({ id, image, profileText, time, text, postIm
         commentCallBack={commentOnPost} />);
 }
 
-const makeMapStateToProps = () => {
-    const getPostCommentsSelector = makeGetPostCommentsSelector();
-    const mapStateToProps = (state, ownProps) => (
-        { postComments: getPostCommentsSelector(state, ownProps) }
-    );
-    return mapStateToProps
-};
+const mapStateToProps = (state, ownProps) => (
+    { post: getPost(state, ownProps) }
+);
 
 
 
-export default connect(makeMapStateToProps, { likePost, sharePost, commentOnPost })(SocialCardContainer);
+export default connect(mapStateToProps, { likePost, sharePost, commentOnPost })(SocialCardContainer);
