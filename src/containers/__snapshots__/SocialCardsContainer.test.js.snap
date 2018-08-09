@@ -104,7 +104,7 @@ exports[`SocialCardsContainer test renders correctly 1`] = `
       <a
         className="Reaction_comment Reaction_button"
         href="javascript:void(0);"
-        onClick={[Function]}
+        onClick={undefined}
       >
         Comment
       </a>
