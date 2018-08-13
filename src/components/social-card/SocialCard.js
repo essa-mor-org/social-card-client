@@ -11,26 +11,26 @@ import './SocialCard.css';
 
 class SocialCard extends PureComponent {
 	render() {
-		const { id, image, profileText, time, text, postImage, like, likes, shares, profileImage, profileName,
+		const { id, image, profileText, time, text, postImage, like, likes, shares,
 			postComments, likeCallBack, shareCallBack } = this.props;
-	return (<div className="Social_card">
-		<SocialCardHeader
-			image={image}
-			profileText={profileText}
-			time={time} />
-		<SocialCardPost
-			text={text}
-			image={postImage}
-		/>
-		<SocialCardReactions
-			likes={likes}
-			comments={postComments.length}
-			shares={shares}
-		/>
-		<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onShare={shareCallBack} />
-		<SocialCardCommentsContainer id={id} />
-	</div>);
-}
+		return (<div className="Social_card">
+			<SocialCardHeader
+				image={image}
+				profileText={profileText}
+				time={time} />
+			<SocialCardPost
+				text={text}
+				image={postImage}
+			/>
+			<SocialCardReactions
+				likes={likes}
+				comments={postComments.length}
+				shares={shares}
+			/>
+			<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onShare={shareCallBack} />
+			<SocialCardCommentsContainer id={id} />
+		</div>);
+	}
 }
 
 SocialCard.propTypes = {
@@ -43,8 +43,6 @@ SocialCard.propTypes = {
 	like: PropTypes.bool,
 	likes: PropTypes.number,
 	shares: PropTypes.number,
-	profileImage: PropTypes.string.isRequired,
-	profileName: PropTypes.string.isRequired,
 	postComments: PropTypes.arrayOf(PropTypes.number).isRequired,
 	likeCallBack: PropTypes.func.isRequired,
 	shareCallBack: PropTypes.func.isRequired
