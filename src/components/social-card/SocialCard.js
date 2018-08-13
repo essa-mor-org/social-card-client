@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import SocialCardHeader from './SocialCardHeader';
 import SocialCardPost from './SocialCardPost';
-import SocialCardReactions from './SocialCardReactions';
-import SocialCardReact from './SocialCardReact';
+import SocialCardReactions from './reactions/SocialCardReactions';
+import SocialCardReact from './reactions/SocialCardReact';
 import SocialCardCommentsContainer from '../../containers/comments/SocialCardCommentsContainer';
 
 import './SocialCard.css';
