@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import ReactionButton from '../buttons/ReactionButton';
+import ReactionButton from '../../buttons/ReactionButton';
 
 import './SocialCardReact.css';
 
