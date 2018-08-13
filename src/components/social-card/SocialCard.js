@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import SocialCardHeader from './SocialCardHeader';
 import SocialCardPost from './SocialCardPost';
-import SocialCardReactions from './reactions/SocialCardReactions';
-import SocialCardReact from './reactions/SocialCardReact';
+import SocialCardReactionPanel from './reactions/SocialCardReactionPanel';
 import SocialCardCommentsContainer from '../../containers/comments/SocialCardCommentsContainer';
 
 import './SocialCard.css';
@@ -22,12 +21,17 @@ class SocialCard extends PureComponent {
 				text={text}
 				image={postImage}
 			/>
-			<SocialCardReactions
+			<SocialCardReactionPanel
 				likes={likes}
-				comments={postComments.length}
+				postComments={postComments}
 				shares={shares}
+				id={id}
+				like={like}
+				likes={likes}
+				shares={shares}
+				likeCallBack={likeCallBack}
+				shareCallBack={shareCallBack}
 			/>
-			<SocialCardReact id={id} like={like} likes={likes} shares={shares} onLike={likeCallBack} onShare={shareCallBack} />
 			<SocialCardCommentsContainer id={id} />
 		</div>);
 	}
