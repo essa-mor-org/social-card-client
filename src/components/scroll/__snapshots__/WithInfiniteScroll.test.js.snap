@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withInfiniteScroll test renders correctly 1`] = `
+<div>
+  <div>
+    Fake List
+  </div>
+</div>
+`;

@@ -8,7 +8,7 @@ export default function (state = INITIAL_STATE, action) {
 		default: {
 			const postComments = fromJS(action).getIn(['payload', 'entities', 'postComments'], {});
 			if (!empty(postComments)) {
-				return state.set('byId', postComments);
+				return state.mergeDeep({'byId': postComments});
 			}
 			return state;
 		}
