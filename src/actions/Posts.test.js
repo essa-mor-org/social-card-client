@@ -24,7 +24,7 @@ const getOutput = (page) => ({
 			payload: () => { },
 			type: POSTS_GET_SUCCESS,
 		}, POSTS_GET_FAILURE],
-		endpoint: `${postsUrl}?_embed=postComments&_page=${page}&_limit=1`,
+		endpoint: `${postsUrl}?_embed=postComments&_page=${page}&_limit=2`,
 		method: 'GET'
 	}
 });

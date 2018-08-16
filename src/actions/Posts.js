@@ -30,7 +30,7 @@ export const fetchPosts = (page) => {
 				return getJSON(res).then((json) => normalize({posts: json, totalCount}, responseSchema));
 			}
 		}, POSTS_GET_FAILURE]
-		, `${endpoint}/posts?_embed=postComments&_page=${page}&_limit=1`);
+		, `${endpoint}/posts?_embed=postComments&_page=${page}&_limit=2`);
 };
 
 export const likePost = ({ id, likes, like }) => {
