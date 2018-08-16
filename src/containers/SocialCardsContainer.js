@@ -2,14 +2,11 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchPosts } from '../actions/Posts';
-import { getPostsIds } from '../selectors/Posts';
+import { getPostsIds, getTotalCount } from '../selectors/Posts';
 import SocialCardContainer from './SocialCardContainer';
+import withInfiniteScroll from '../components/scroll/WithInfiniteScroll';
 
 export class SocialCardsContainer extends PureComponent {
-	componentDidMount() {
-		this.props.fetchPosts();
-	}
-
 	render() {
 		const { postsIds } = this.props;
 		const postItems = postsIds.map(id => (<SocialCardContainer
@@ -19,8 +16,11 @@ export class SocialCardsContainer extends PureComponent {
 	}
 }
 
-const mapStateToProps = (state) => ({
-	postsIds: getPostsIds(state)
-});
+const mapStateToProps = (state) => {
+	const postsIds = getPostsIds(state);
+	const totalCount = getTotalCount(state);
+	const hasMore = totalCount == null || postsIds.size < totalCount;
+	return { postsIds, hasMore };
+};
 
-export default connect(mapStateToProps, { fetchPosts })(SocialCardsContainer);
+export default connect(mapStateToProps, { fetchPosts })(withInfiniteScroll(SocialCardsContainer, { fetchMethodName: 'fetchPosts' }));

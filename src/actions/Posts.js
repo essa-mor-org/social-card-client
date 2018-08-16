@@ -1,7 +1,7 @@
 import { normalize } from 'normalizr';
 import { getJSON } from 'redux-api-middleware';
 
-import { post } from '../schemas';
+import { responseSchema } from '../schemas';
 import { getApi, patchApi , postApi} from './Api';
 
 export const endpoint = 'http://localhost:3004';
@@ -21,15 +21,16 @@ export const POSTS_COMMENT_REQUEST = 'posts/POSTS_COMMENT_REQUEST';
 export const POSTS_COMMENT_SUCCESS = 'posts/POSTS_COMMENT_SUCCESS';
 export const POSTS_COMMENT_FAILURE = 'posts/POSTS_COMMENT_FAILURE';
 
-export const fetchPosts = () => {
+export const fetchPosts = (page) => {
 	return getApi(
 		[POSTS_GET_REQUEST, {
 			type: POSTS_GET_SUCCESS,
 			payload: (action, state, res) => {
-				return getJSON(res).then((json) => normalize(json, [post]));
+				const totalCount = res.headers.get('X-Total-Count');
+				return getJSON(res).then((json) => normalize({posts: json, totalCount}, responseSchema));
 			}
 		}, POSTS_GET_FAILURE]
-		, `${endpoint}/posts?_embed=postComments`);
+		, `${endpoint}/posts?_embed=postComments&_page=${page}&_limit=1`);
 };
 
 export const likePost = ({ id, likes, like }) => {

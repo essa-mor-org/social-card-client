@@ -18,13 +18,13 @@ import {
 
 const postsUrl = `${endpoint}/posts`;
 
-const getOutput = () => ({
+const getOutput = (page) => ({
 	[RSAA]: {
 		types: [POSTS_GET_REQUEST, {
 			payload: () => { },
 			type: POSTS_GET_SUCCESS,
 		}, POSTS_GET_FAILURE],
-		endpoint: `${postsUrl}?_embed=postComments`,
+		endpoint: `${postsUrl}?_embed=postComments&_page=${page}&_limit=1`,
 		method: 'GET'
 	}
 });
@@ -57,8 +57,8 @@ const postOutput = (types, endpoint, body) => ({
 
 describe('Posts actions', () => {
 	it('should create an action to fetch posts', () => {
-		const expectedAction = getOutput();
-		expect(JSON.stringify(fetchPosts())).toEqual(JSON.stringify(expectedAction));
+		const expectedAction = getOutput(1);
+		expect(JSON.stringify(fetchPosts(1))).toEqual(JSON.stringify(expectedAction));
 	});
 
 	it('should create an action to like posts', () => {

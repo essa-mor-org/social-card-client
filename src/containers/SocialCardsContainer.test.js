@@ -46,11 +46,4 @@ describe('SocialCardsContainer test', () => {
 			.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
-
-	it('call fetchPosts', () => {
-		const callBack = jest.fn();
-		mount(<MockProvider store={store}><SocialCardsContainer postsIds={postsIds}
-			fetchPosts={callBack} /></MockProvider>);
-		expect(callBack).toHaveBeenCalledTimes(1);
-	});
 });
